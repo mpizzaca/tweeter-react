@@ -46,10 +46,6 @@ form > label {
   color:rgba(114, 114, 114, 0.8)
 }
 
-output.counter.negative {
-  color: red;
-}
-
 label.error {
   color: red;
   margin-top: 1rem;

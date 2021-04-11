@@ -1,19 +1,22 @@
 import React from 'react';
 import './Tweet.css';
 
-export const Tweet = () => {
+export const Tweet = props => {
+
+  const { name, avatar, handle, text, date, age } = props;
+
   return (
     <article>
       <header>
         <div>
-          <img className="profile-pic" src="https://i.imgur.com/lRUnDgU.png" />
-          <h3>Curie</h3>
+          <img className="profile-pic" src={avatar} />
+          <h3>{name}</h3>
         </div>
-        <h3>@curieous</h3>
+        <h3>{handle}</h3>
       </header>
-      <p className="tweet-text">I was taught that the way of progress is neither swift nor easy.</p>
+      <p className="tweet-text">{text}</p>
       <footer>
-        <span title="Fri Apr 09 2021 13:55:15 GMT-0400 (Eastern Daylight Time)">1 day ago</span>
+        <span title={date}>{age}</span>
         <div>
           <img src="/flag.png" />
           <img src="/retweet.png" />
