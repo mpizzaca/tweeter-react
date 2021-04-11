@@ -1,38 +1,115 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  margin: 0;
+}
+
+html, body, #root, .App {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  align-self: center;
+  width: 90%;
+  background-color: transparent;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+main > section {
+  width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.arrow {
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow.down {
+  border: solid red;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow.up {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+#return-to-top {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  right: -100px;
+  bottom: 0px;
+  height: 3rem;
+  width: 4rem;
+  margin: 0 0.5rem 0.5rem 0;
+  border-radius: 1.5rem;
+  background-color: #216b96;
+  border-color: transparent;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+#return-to-top.visible {
+  right: 0px;
+}
+
+#return-to-top:hover {
+  cursor: pointer;
+  background-color: #134968;
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App > header {
+    width: 50%;
+    height: 40%;
+    margin: 10rem 0 0 5rem;
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  main {
+    margin-top: 160px;
   }
 }
