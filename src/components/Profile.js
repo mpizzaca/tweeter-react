@@ -9,7 +9,7 @@ export const Profile = () => {
       </div>
       <br />
       <div>
-        <h2>Mitchell Pizzacalla</h2>
+        <h2><span className="profile--bold">Mitchell</span> Pizzacalla</h2>
       </div>
     </header>
   );
