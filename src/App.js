@@ -14,7 +14,9 @@ function App() {
       <Profile />
       <main className="container">
         <TweetForm />
+        <section className='tweets'>
         <Tweet />
+        </section>
       </main>
     </div>
   );

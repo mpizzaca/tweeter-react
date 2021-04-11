@@ -1,5 +1,4 @@
 .App > header {
-  /* height: 400px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,4 +10,13 @@
 
 header h2 {
   color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 1024px) {
+  .App > header {
+    width: 50%;
+    height: 40%;
+    margin: 10rem 0 0 5rem;
+    padding: 2rem 1rem 0 1rem;
+  }
 }

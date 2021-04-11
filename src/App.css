@@ -18,15 +18,11 @@ html {
 
 body {
   margin: 0;
-}
-
-html, body, #root, .App {
-  height: 100%;
+  background-color: #f4f1ec;
 }
 
 .App {
   color: #545149;
-  background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
@@ -100,13 +96,6 @@ main > section {
 @media screen and (min-width: 1024px) {
   .App {
     flex-direction: row;
-  }
-
-  .App > header {
-    width: 50%;
-    height: 40%;
-    margin: 10rem 0 0 5rem;
-    padding: 2rem 1rem 0 1rem;
   }
 
   main {
